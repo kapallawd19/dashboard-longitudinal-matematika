@@ -96,7 +96,7 @@ elif menu == "3. Klasterisasi Siswa (K-Means)":
     
     st.markdown(f"#### Karakteristik Rata-rata Tiap Klaster (K = {n_clusters})")
     cluster_summary = df.groupby('cluster')[features + ['target_nilai_t1']].mean()
-    st.dataframe(cluster_summary.style.background_cmap('Blues'))
+   st.dataframe(cluster_summary)
     
     st.markdown("#### Visualisasi Sebaran Klaster")
     x_axis = st.selectbox("Pilih Sumbu X", features, index=0)
