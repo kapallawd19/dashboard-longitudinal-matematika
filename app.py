@@ -12,7 +12,7 @@ from sklearn.metrics import classification_report, accuracy_score, confusion_mat
 # Konfigurasi Halaman Streamlit
 st.set_page_config(page_title="Dashboard ML Longitudinal Matematika", layout="wide")
 
-st.title("📊 Dashboard Prediktif & Analisis Longitudinal Matematika")
+st.title("Dashboard Prediktif & Analisis Longitudinal Matematika")
 st.markdown("Aplikasi Machine Learning berbasis Streamlit untuk memprediksi capaian belajar siswa dan klasterisasi profil akademik.")
 
 # 1. LOAD DATA
@@ -51,7 +51,7 @@ if menu == "1. Overview Data":
     st.pyplot(fig)
 
 elif menu == "2. Model Prediktif (Klasifikasi)":
-    st.subheader("🤖 Prediksi Kategori Capaian Siswa (Random Forest)")
+    st.subheader("Prediksi Kategori Capaian Siswa (Random Forest)")
     
     X = df[features]
     y = df['kategori_target_t1']
@@ -85,7 +85,7 @@ elif menu == "2. Model Prediktif (Klasifikasi)":
         st.pyplot(fig)
 
 elif menu == "3. Klasterisasi Siswa (K-Means)":
-    st.subheader("👥 Klasterisasi Profil Siswa Berdasarkan Perilaku & Akademik")
+    st.subheader("Klasterisasi Profil Siswa Berdasarkan Perilaku & Akademik")
     
     scaler = StandardScaler()
     X_scaled = scaler.fit_transform(df[features])
